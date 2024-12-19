@@ -1,2 +1,2 @@
 # treasure-island-game
-Beginner Projetc
+Beginner Project
