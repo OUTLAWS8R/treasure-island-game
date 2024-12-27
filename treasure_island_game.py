@@ -1,3 +1,6 @@
+import time
+import sys
+
 def start_game():
     while True:
         print("Welcome to Treasure Island.")
@@ -41,8 +44,18 @@ def start_game():
                 print("Invalid choice. Please choose Left or Right.")
         
         play_again = input("Would you like to play again or quit? (play/quit): ").strip().lower()
-        if play_again != 'play':
-            print("Thanks for playing! Goodbye!")
-            break
-
+        if play_again == 'quit':
+            print("Thanks for playing, Goodbye!")
+            print("The game will close in 3, 2, 1...")
+            time.sleep(1)
+            print("3...")
+            time.sleep(1)
+            print("2...")
+            time.sleep(1)
+            print("1...")
+            sys.exit()
+        elif play_again != 'play':
+            print("Invalid choice. Please choose play or quit.")
+        else:
+            print("Starting a new game...")
 start_game()
